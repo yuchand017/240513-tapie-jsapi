@@ -1,3 +1,4 @@
+<!-- FLAG: TAPIE{1e9c43d525ee24d40e130d716d09055ff27f7fd9ce9d7dfbdfbb5b1b5024194f} -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +22,9 @@ fetch(url, {
     },
     body: JSON.stringify(data),
 })
-.then(response => response.json())
-.then(data => console.log(data))
-.catch((error) => console.error('Error:', error));
+.then(response => response.text())
+.then(data => {
+    document.write('<h1>TAPIE CTF : fetch1, level2</h1><br>' + data);
+});
 </script>
 </html>
