@@ -16,18 +16,93 @@
     font-family: 'Inter';
 }
 
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 body {
     display: flex;
     justify-content: center;
+    padding: 80px 120px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#root {
     flex-direction: column;
-    align-items: center;
-}
-
-#loading {
-}
-
-.root {
     width: 1100px;
-    background-color: lightblue;
+    justify-content: center;
+}
+
+
+.article > p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#menu img {
+    height: 32px;
+    cursor: pointer;
+}
+
+
+.title, .view-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.title:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+.title > h1, h4 {
+    margin: 0;
+}
+
+.title > h1, .view-title > h1 {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.title > h4, .view-title > h4 {
+    white-space: nowrap;
+}
+
+
+@media screen and (max-width: 900px){
+    body {
+        padding: 20px 40px;
+    }
+    .root{
+        width: 820px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .root{
+        width: 620px;
+    }
+    .title > h1 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .root{
+        width: 420px;
+    }
+    .title > h4 {
+        font-size: 18px;
+    }
+    .title > p {
+        font-size: 16px;
+    }
 }
