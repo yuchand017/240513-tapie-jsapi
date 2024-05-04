@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    fetch('https://fetch1.etty.dev/level3/solve', {
+        headers: {
+            'X-ZZ': 'TAPIE'
+        },
+    })
+    .then(response => response.text())
+    .then(data => {
+        document.write(data);
+    });
+</script>
+</html>
